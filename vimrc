@@ -183,6 +183,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 """ Bundles
+
 " Temas
 Plugin 'KabbAmine/yowish.vim'
 Plugin 'tomasr/molokai'
@@ -196,6 +197,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'nelstrom/vim-markdown-folding'
+Plugin 'szw/vim-ctrlspace'
 
 " HTML/CSS
 Plugin 'amirh/HTML-AutoCloseTag'
@@ -289,3 +291,8 @@ let g:syntastic_style_error_symbol = '✗'
 let g:syntastic_style_warning_symbol = '⚠'
 let g:syntastic_auto_loc_list=1
 let g:syntastic_aggregate_errors = 1
+
+" CtrlSpace
+set nocompatible
+set hidden
+
