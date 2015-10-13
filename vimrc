@@ -198,6 +198,8 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'nelstrom/vim-markdown-folding'
 Plugin 'szw/vim-ctrlspace'
+Plugin 'tpope/vim-surround'
+Plugin 'terryma/vim-multiple-cursors'
 
 " HTML/CSS
 Plugin 'amirh/HTML-AutoCloseTag'
@@ -295,4 +297,11 @@ let g:syntastic_aggregate_errors = 1
 " CtrlSpace
 set nocompatible
 set hidden
+
+" MultipleCursors"
+let g:multi_cursor_use_default_mapping=0
+let g:multi_cursor_next_key='<C-d>'
+let g:multi_cursor_prev_key='<C-p>'
+let g:multi_cursor_skip_key='<C-x>'
+let g:multi_cursor_quit_key='<Esc>'
 
