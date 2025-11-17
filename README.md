@@ -119,17 +119,16 @@ A statusline foi configurada para mostrar bastante informação útil:
   - `[help]`/`[preview]` se aplicável.
 - **Tipo de arquivo**: `FT:python`, `FT:markdown`, etc. (ou `noft` se vazio).
 - **Encoding e fim de linha**: `ENC:utf-8/unix`, `ENC:utf-8/dos`, etc.
-- **Diretório atual**: `PWD:vimfiles` (somente o nome da pasta).
+- **Caminho completo do arquivo exibido em**: [PATH:/caminho/completo/arquivo]
 - **Posição**:
   - `Ln:x/y` → linha atual / total de linhas.
   - `Col:z` → coluna atual.
   - `[p%]` → porcentagem de progresso no arquivo.
 
-Exemplo visual aproximado:
+Agora a statusline inclui o caminho completo do arquivo usando o item `[PATH:%F]`, por exemplo:
 
-```text
-1:README.md + [FT:markdown] [ENC:utf-8/unix] [PWD:vimfiles]          Ln:10/169 Col:5 [6%]
-```
+[PATH:/home/raphaelfranco/vimfiles/README.md]
+
 
 As cores da barra são ajustadas para ficar legível em temas escuros (linha ativa e linhas de janelas inativas).
 

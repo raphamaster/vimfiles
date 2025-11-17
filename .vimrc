@@ -80,7 +80,7 @@ set laststatus=2
 
 " Statusline cheia de informações:
 " buffer:nome | flags | filetype | encoding/formato | pwd | linha/coluna | porcentagem
-set statusline=%#StatusLine#%n:%<%f\ %m%r%h%w\ [FT:%{&filetype==''?'noft':&filetype}]\ [ENC:%{&fileencoding==''?&encoding:&fileencoding}/%{&fileformat}]\ [PWD:%{fnamemodify(getcwd(),':t')}]\ %=Ln:%l/%L\ Col:%c\ [%p%%]
+set statusline=%#StatusLine#%n:%<%f\ %m%r%h%w\ [FT:%{&filetype==''?'noft':&filetype}]\ [ENC:%{&fileencoding==''?&encoding:&fileencoding}/%{&fileformat}]\ [PATH:%F]\ %=Ln:%l/%L\ Col:%c\ [%p%%]
 
 " ==========================
 " Atalhos básicos
