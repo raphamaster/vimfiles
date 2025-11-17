@@ -9,9 +9,9 @@ syntax on                     " Liga o realce de sintaxe
 syntax enable                 " Garante que o realce de sintaxe esteja habilitado para todos os tipos de arquivo
 
 set background=dark           " Informa ao Vim que o fundo do terminal é escuro (ajuda temas a escolherem cores)
-if has('termguicolors')       " Verifica se o Vim suporta cores verdadeiras (24-bit)
-  set termguicolors           " Habilita cores verdadeiras no terminal, se suportado
-endif
+
+" Tema Bacaninha que vem com o VIM 
+colorscheme desert
 
 " Destacar linha/coluna do cursor de forma visível
 set cursorline                " Destaca a linha onde o cursor está
@@ -93,11 +93,6 @@ nnoremap <C-j> <C-w>j        " Ctrl+j move para a janela de baixo
 nnoremap <C-k> <C-w>k        " Ctrl+k move para a janela de cima
 nnoremap <C-l> <C-w>l        " Ctrl+l move para a janela da direita
 
-" Salvar e sair rápido
-nnoremap <leader>w :w<CR>    " <Leader>w salva o arquivo (:w)
-nnoremap <leader>q :q<CR>    " <Leader>q fecha a janela (:q)
-nnoremap <leader>x :x<CR>    " <Leader>x salva e fecha se houve alterações (:x)
-
 " Limpar highlight de busca
 nnoremap <leader><Space> :nohlsearch<CR> " <Leader><Space> limpa o destaque de buscas (nohlsearch)
 
@@ -116,16 +111,6 @@ let g:netrw_winsize = 25     " Largura da janela lateral (percentual)
 
 " Atalho para abrir a barra lateral na esquerda com o diretório atual
 nnoremap <F2> :Lexplore<CR>
-
-" ==========================
-" Tema Dracula
-" ==========================
-" Tenta aplicar o tema 'dracula' (é preciso ter o tema instalado em ~/.vim/pack/themes/start/dracula)
-try
-  colorscheme dracula        " Define o esquema de cores para 'dracula'
-catch
-  colorscheme default        " Se o tema não estiver disponível, volta para o tema padrão do Vim
-endtry
 
 highlight StatusLine   cterm=NONE ctermfg=255 ctermbg=237
 highlight StatusLineNC cterm=NONE ctermfg=245 ctermbg=236
