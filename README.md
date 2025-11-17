@@ -108,6 +108,33 @@ Se o tema não estiver instalado, o próprio `.vimrc` faz *fallback* para `color
 
 ---
 
+## Barra de status personalizada
+
+A statusline foi configurada para mostrar bastante informação útil:
+
+- **Buffer e arquivo**: `1:README.md` (número do buffer + nome do arquivo).
+- **Flags**:
+  - `+` → arquivo modificado.
+  - `RO` → somente leitura.
+  - `[help]`/`[preview]` se aplicável.
+- **Tipo de arquivo**: `FT:python`, `FT:markdown`, etc. (ou `noft` se vazio).
+- **Encoding e fim de linha**: `ENC:utf-8/unix`, `ENC:utf-8/dos`, etc.
+- **Diretório atual**: `PWD:vimfiles` (somente o nome da pasta).
+- **Posição**:
+  - `Ln:x/y` → linha atual / total de linhas.
+  - `Col:z` → coluna atual.
+  - `[p%]` → porcentagem de progresso no arquivo.
+
+Exemplo visual aproximado:
+
+```text
+1:README.md + [FT:markdown] [ENC:utf-8/unix] [PWD:vimfiles]          Ln:10/169 Col:5 [6%]
+```
+
+As cores da barra são ajustadas para ficar legível em temas escuros (linha ativa e linhas de janelas inativas).
+
+---
+
 ## Atalhos básicos
 
 A tecla **Leader** é o **espaço**:

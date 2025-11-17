@@ -75,15 +75,12 @@ set smarttab                 " Faz TAB respeitar a indentação inteligente
 set shiftwidth=4             " Define tamanho da indentação (>> e <<) como 4 espaços
 set tabstop=4                " Define um TAB como equivalente a 4 espaços na visualização
 
-set laststatus=2             " Sempre mostra a barra de status, mesmo com apenas uma janela
+" Sempre mostrar a barra de status
+set laststatus=2
 
-" Statusline simples (formato da barra de status na parte de baixo)
-" [%n]      -> número do buffer
-" %<%.99f   -> caminho/nome do arquivo (com truncamento inteligente)
-" %h%w%m%r%y-> flags (help, preview, modificado, somente leitura, tipo de arquivo)
-" %{...}    -> expressão avaliada (no caso, função CapsLockStatusline se existir)
-" %=%-16(...)-> lado direito da statusline com linha, coluna, etc.
-set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
+" Statusline cheia de informações:
+" buffer:nome | flags | filetype | encoding/formato | pwd | linha/coluna | porcentagem
+set statusline=%#StatusLine#%n:%<%f\ %m%r%h%w\ [FT:%{&filetype==''?'noft':&filetype}]\ [ENC:%{&fileencoding==''?&encoding:&fileencoding}/%{&fileformat}]\ [PWD:%{fnamemodify(getcwd(),':t')}]\ %=Ln:%l/%L\ Col:%c\ [%p%%]
 
 " ==========================
 " Atalhos básicos
@@ -129,4 +126,7 @@ try
 catch
   colorscheme default        " Se o tema não estiver disponível, volta para o tema padrão do Vim
 endtry
+
+highlight StatusLine   cterm=NONE ctermfg=255 ctermbg=237
+highlight StatusLineNC cterm=NONE ctermfg=245 ctermbg=236
 
