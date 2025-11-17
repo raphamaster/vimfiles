@@ -1,4 +1,4 @@
-# vimfiles – Vim config do Raphael Franco
+# vimfiles – Vim config do Rapha ;D
 
 Configuração **minimalista de Vim**, pensada para funcionar em qualquer distro Linux, com:
 
@@ -152,7 +152,7 @@ Configurações principais:
 
 ### Atalho
 
-- `<Leader>e` – abre o explorer lateral (barra de diretórios) com `:Lexplore`.
+- `<F2>` – abre o explorer lateral (barra de diretórios) com `:Lexplore`.
 
 Passos típicos:
 
@@ -163,7 +163,7 @@ Passos típicos:
    ```
 2. No Vim, pressione:
    ```text
-   <Space> e
+   <F2>
    ```
 3. Use `j` / `k` ou as setas para navegar; `Enter` abre o arquivo na janela da direita.
 
